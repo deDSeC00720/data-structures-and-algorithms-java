@@ -1,7 +1,6 @@
-import algorithms.searching.Search;
+import algorithms.sorting.Sort;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -11,12 +10,17 @@ public class Main {
         scanner = new Scanner(System.in);
     }
     public static void main(String[] args) {
+        ArrayList<Integer> arrayList = new ArrayList<>();
         int n = scanner.nextInt();
-        List<Integer> list = new ArrayList<>();
         for (int i = 0; i < n; i++) {
-            list.add(scanner.nextInt());
+            arrayList.add(scanner.nextInt());
         }
-        System.out.println(Search.linearSearch(list, 5));
-        System.out.println(Search.binarySearch(list, 5));
+        System.out.println("Before sorting:");
+        System.out.println(arrayList);
+
+        Sort.insertionSort(arrayList);
+
+        System.out.println("After sorting:");
+        System.out.println(arrayList);
     }
 }
