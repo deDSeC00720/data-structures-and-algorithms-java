@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Before sorting:");
         System.out.println(arrayList);
 
-        Sort.selectionSort(arrayList);
+        Sort.insertionSort(arrayList);
 
         System.out.println("After sorting:");
         System.out.println(arrayList);
